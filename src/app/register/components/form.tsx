@@ -31,6 +31,7 @@ export const FormComponent = () => {
         ...values,
       };
       const { result, error } = await signUp(body);
+      console.log(error);
       if (error) {
         setLoading(false);
         return toast.error(authErrors(error));
@@ -41,7 +42,7 @@ export const FormComponent = () => {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <img src="/assets/logos/logo.jpeg" alt="" />
+      <img src="/logo.png" alt="" />
       <h2>Crear una cuenta nueva</h2>
       <div className="login-input">
         <span className="input-span">
