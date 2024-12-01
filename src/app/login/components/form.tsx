@@ -36,7 +36,7 @@ export const FormComponent = () => {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <img src="/assets/logos/logo.jpeg" alt="" />
+      <img src="/logo.png" alt="" />
       <h2>Inicia sesión</h2>
       <p>Que esperas para ver la pelea</p>
       <div className="login-input"></div>
