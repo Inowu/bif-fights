@@ -72,7 +72,7 @@ export default function PaymentComponent() {
       await onMerge(obj);
     } catch (error) {
       console.log(error);
-      toast.error("Ocurrió un error al procesar su pago");
+      toast.error("Hubo un error con tu método de pago");
       setLoading(false);
     }
   };
@@ -85,7 +85,7 @@ export default function PaymentComponent() {
   return (
     <div className="event-container mt-3">
       <div className="event">
-        <p>Pagar evento</p>
+        <p>Pagar evento: Pay per view Bif 4</p>
         <h2>{price}</h2>
         <p>World kick boxing council</p>
         <div className="info mb-3">
@@ -168,7 +168,7 @@ export default function PaymentComponent() {
         <button type="submit" onClick={handlePayment}>
           {!loading ? "Pagar" : <SpinnerLoader color="#fff" size={30} />}
         </button>
-        <img src="/logo.png" alt="bif" />
+        <img src="/assets/logos/logo.png" alt="bif" />
       </form>
     </div>
   );
