@@ -8,6 +8,7 @@ import { useUser } from "@/app/context/UserContext";
 import { paymentEvent } from "@/services/checkout/checkout";
 import { SpinnerLoader } from "@/components/SpinnerLoader/SpinnerLoader";
 import { onMerge } from "@/services/firebase";
+import Image from "next/image";
 declare let window: any;
 
 export default function PaymentComponent() {
@@ -85,7 +86,7 @@ export default function PaymentComponent() {
   return (
     <div className="event-container mt-3">
       <div className="event">
-        <p>Pagar evento: Pay per view Bif 4</p>
+        <p>Pagar evento: Pay per view Bif 5</p>
         <h2>{price}</h2>
         <p>World kick boxing council</p>
         <div className="info mb-3">
@@ -103,7 +104,7 @@ export default function PaymentComponent() {
             </p>
           </div>
         </div>
-        <div className="price-container">
+        {/* <div className="price-container">
           <h3>Subtotal</h3>
           <p>${subtotal}</p>
         </div>
@@ -112,12 +113,12 @@ export default function PaymentComponent() {
           <h3>Iva</h3>
           <p>${iva}</p>
         </div>
-        <div className="line"></div>
+        <div className="line"></div> */}
         <div className="price-container">
           <h3>Total</h3>
           <p>${total}</p>
         </div>
-        <p className="mt-5">©BifFights 2024. Todos los derechos reservados</p>
+        <p className="mt-5">©BifFights 2025. Todos los derechos reservados</p>
       </div>
       <form>
         <div className="input-container">
@@ -168,7 +169,14 @@ export default function PaymentComponent() {
         <button type="submit" onClick={handlePayment}>
           {!loading ? "Pagar" : <SpinnerLoader color="#fff" size={30} />}
         </button>
-        <img src="/assets/logos/logo.png" alt="bif" />
+        <div className="bg-black flex justify-center items-center rounded-xl relative overflow-auto p-3 ">
+          <Image
+            src="/assets/logos/logo.png"
+            alt="bif"
+            width={250}
+            height={100}
+          />
+        </div>
       </form>
     </div>
   );
